@@ -40,6 +40,10 @@ A page to view collection contents (Albums, playlists, mixes, etc...)
 
 ![](./design/screenshots/artist-view.png)
 
+### Search page
+
+![](./design/screenshots/search.png)
+
 ### Player
 
 ![](./design/screenshots/player.png)
