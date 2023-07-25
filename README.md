@@ -6,6 +6,12 @@ Clone of the [Spotify Web Player](https://open.spotify.com/) using **React** & *
 
 This clone features the following functionalities from the original app:
 
+### Login page
+
+Functional login page with third party authentication.
+
+![](./design/screenshots/login.png)
+
 ### Home page
 
 - A guest version for non-logged-in users
