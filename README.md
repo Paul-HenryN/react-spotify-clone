@@ -50,5 +50,5 @@ Spotify's [Web API](https://developer.spotify.com/documentation/web-api) enables
 
 ## TECH STACK
 
-- [**React**](https://react.dev/) [React router](https://reactrouter.com/en/main)
+- [**React**](https://react.dev/) & [React router](https://reactrouter.com/en/main)
 - [**TailwindCSS**](https://tailwindcss.com/)
