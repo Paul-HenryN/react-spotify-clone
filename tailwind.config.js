@@ -3,7 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      body: "CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic",
+      body: "Roboto, sans-serif",
+    },
+    fontWeight: {
+      regular: 400,
+      bold: 700,
+      extrabold: 900,
     },
     extend: {
       colors: {
