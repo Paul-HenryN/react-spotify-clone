@@ -8,6 +8,8 @@ import ThirdPartyAuthButton from "../components/Buttons/ThirdPartyAuthButton";
 import FormInput from "../components/FormInput";
 import PrimaryButton from "../components/Buttons/PrimaryButton";
 import Link from "../components/Link";
+import { useNavigate } from "react-router-dom";
+import { routes } from "../shared/routes";
 
 const authProviders = [
   {
@@ -25,6 +27,8 @@ const authProviders = [
 ];
 
 export default function Login() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen flex flex-col items-stretch font-body bg-black md:bg-gradient-to-b md:from-zinc-900 md:to-black">
       <header className="py-12 md:py-8 px-8 md:px-12 md:mb-8 bg-black">
@@ -52,7 +56,13 @@ export default function Login() {
 
         <hr className="border-t-[1px] border-zinc-800" />
 
-        <form className="flex flex-col gap-5 md:px-[5.5rem]">
+        <form
+          className="flex flex-col gap-5 md:px-[5.5rem]"
+          onSubmit={(e) => {
+            e.preventDefault();
+            navigate(routes.HOME);
+          }}
+        >
           <FormInput
             type="text"
             id="username"
