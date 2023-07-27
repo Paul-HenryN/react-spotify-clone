@@ -6,27 +6,16 @@ import {
   faAngleRight,
   faBookOpen,
   faGlobe,
-  faHome,
   faPlus,
-  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import SectionContainer from "../components/SectionContainer";
+import SideMenu from "../components/SideMenu";
 
 export default function Root() {
   return (
     <div className="h-screen grid overflow-hidden grid-cols-[min_content_auto] gap-2 p-2 bg-black">
       <aside className="flex flex-col gap-2 overflow-auto resize-x min-w-[15rem] max-w-[26rem]">
-        <SectionContainer>
-          <a href={routes.HOME}>
-            <FontAwesomeIcon icon={faHome} />
-            Home
-          </a>
-
-          <a href={routes.HOME}>
-            <FontAwesomeIcon icon={faSearch} />
-            Search
-          </a>
-        </SectionContainer>
+        <SideMenu />
 
         <SectionContainer>
           <div>
@@ -87,7 +76,7 @@ export default function Root() {
         </SectionContainer>
       </aside>
 
-      <SectionContainer className="overflow-scroll relative bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900">
+      <SectionContainer className="overflow-scroll relative bg-local bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900">
         <header className="fixed bg-neutral-90">
           <nav>
             <div>
