@@ -10,12 +10,13 @@ import {
   faPlus,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import SectionContainer from "../components/SectionContainer";
 
 export default function Root() {
   return (
-    <div className="h-screen grid overflow-hidden grid-cols-[min_content_auto] grid-rows-[_8fr_1fr] gap-3 p-2 bg-black">
-      <aside className="overflow-auto resize-x min-w-[15rem] max-w-[26rem]">
-        <div className="bg-neutral-900">
+    <div className="h-screen grid overflow-hidden grid-cols-[min_content_auto] gap-2 p-2 bg-black">
+      <aside className="flex flex-col gap-2 overflow-auto resize-x min-w-[15rem] max-w-[26rem]">
+        <SectionContainer>
           <a href={routes.HOME}>
             <FontAwesomeIcon icon={faHome} />
             Home
@@ -25,9 +26,9 @@ export default function Root() {
             <FontAwesomeIcon icon={faSearch} />
             Search
           </a>
-        </div>
+        </SectionContainer>
 
-        <div className="bg-neutral-900">
+        <SectionContainer>
           <div>
             <button title="Collapse your library">
               <FontAwesomeIcon icon={faBookOpen} />
@@ -83,10 +84,10 @@ export default function Root() {
               English
             </button>
           </div>
-        </div>
+        </SectionContainer>
       </aside>
 
-      <div className="overflow-scroll relative">
+      <SectionContainer className="overflow-scroll relative bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900">
         <header className="fixed bg-neutral-90">
           <nav>
             <div>
@@ -184,14 +185,18 @@ export default function Root() {
           </p>
           <Outlet />
         </main>
-      </div>
+      </SectionContainer>
 
-      <aside className="col-span-2 bg-accent-1">
-        <p>PREVIEW OF SPOTIFY</p>
+      <aside className="col-span-2 flex justify-between items-center bg-gradient-to-r from-accent-1 to-accent-2 px-4 py-3">
         <p>
+          <span className="block text-sm tracking-wider">
+            PREVIEW OF SPOTIFY
+          </span>
           Sign up to get unlimited songs and podcasts with occasional ads. No
           credit card needed.
         </p>
+
+        <a href="#">Signup for free</a>
       </aside>
     </div>
   );
