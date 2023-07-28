@@ -5,6 +5,7 @@ import Root from "./routes/root";
 import Login from "./routes/login";
 import { routes } from "./shared/routes";
 import "./index.css";
+import Home from "./routes/home";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,12 @@ const router = createBrowserRouter([
   {
     path: routes.HOME,
     element: <Root />,
+    children: [
+      {
+        path: routes.HOME,
+        element: <Home />,
+      },
+    ],
   },
 ]);
 
