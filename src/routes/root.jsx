@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar";
 
 export default function Root() {
   return (
-    <div className="h-screen grid overflow-hidden grid-cols-[min-content_auto] gap-y-2 p-2 bg-black">
+    <div className="h-screen min-w-[45rem] grid overflow-hidden grid-cols-[min-content_auto] gap-y-2 p-2 bg-black">
       <Sidebar />
 
       <SectionContainer className="overflow-scroll relative bg-local bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900">
