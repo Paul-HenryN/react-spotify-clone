@@ -9,26 +9,44 @@ import BorderedButton from "./Buttons/BorderedButton";
 import Card from "./Card";
 import { useEffect, useState, useRef } from "react";
 
+const defaultWidth = 350;
+const minWidth = 275;
+const maxWidth = 425;
+
 export default function Sidebar() {
   const [width, setWidth] = useState(
-    parseInt(localStorage.getItem("sidebarWidth")) || 350
+    parseInt(localStorage.getItem("sidebarWidth")) || defaultWidth
   );
+
   let isDragged = useRef(false);
 
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
-      if (isDragged.current) {
-        document.body.style.userSelect = "none";
-        setWidth(width + e.movementX);
+      if (!isDragged.current) {
+        return;
+      }
+
+      document.body.style.userSelect = "none";
+
+      const currentWidth =
+        parseInt(localStorage.getItem("sidebarWidth")) || defaultWidth;
+
+      const newWidth = currentWidth + e.movementX;
+
+      if (newWidth >= minWidth && newWidth <= maxWidth) {
+        setWidth(newWidth);
       }
     });
 
     window.addEventListener("mouseup", () => {
       document.body.style.userSelect = "auto";
       isDragged.current = false;
-      localStorage.setItem("sidebarWidth", width);
     });
-  });
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("sidebarWidth", width);
+  }, [width]);
 
   return (
     <div className="flex relative overflow-y-auto">
