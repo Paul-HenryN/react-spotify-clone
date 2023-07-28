@@ -5,11 +5,11 @@ export default function SideMenuButton({ icon, label, href, active = false }) {
   return (
     <FlatButton
       href={href}
-      className={`gap-4 text-md font-bold ${
+      className={`gap-5 text-md font-bold ${
         active ? "text-white" : "text-neutral-400"
       }`}
     >
-      <FontAwesomeIcon size="lg" icon={icon} />
+      <FontAwesomeIcon size="xl" icon={icon} />
       {label}
     </FlatButton>
   );

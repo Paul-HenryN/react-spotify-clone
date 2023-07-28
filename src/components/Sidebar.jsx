@@ -57,7 +57,7 @@ export default function Sidebar() {
         <SideMenu />
 
         <SectionContainer className="gap-5 h-full">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center px-3">
             <RoundedButton className="gap-3">
               <FontAwesomeIcon icon={faBookOpen} />
               Your Library
@@ -68,7 +68,7 @@ export default function Sidebar() {
             </CircularButton>
           </div>
 
-          <div className="flex flex-col gap-6 h-36 pb-10 overflow-auto">
+          <div className="flex flex-col gap-6 h-36 pb-10 overflow-auto px-2">
             <Card className="gap-3 items-start bg-neutral-800 p-4">
               <p className="font-bold">Create your first playlist</p>
               <p className="text-sm font-bold">
@@ -92,7 +92,7 @@ export default function Sidebar() {
             </Card>
           </div>
 
-          <div className="flex flex-col gap-10 items-start mt-5">
+          <div className="flex flex-col gap-10 items-start mt-5 px-6">
             <ul className="flex flex-wrap text-xs text-neutral-400 gap-3">
               <li>
                 <a href="#">Legal</a>
