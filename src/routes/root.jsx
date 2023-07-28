@@ -15,6 +15,7 @@ import CircularButton from "../components/Buttons/CircularButton";
 import Card from "../components/Card";
 import SecondaryButton from "../components/Buttons/SecondaryButton";
 import BorderedButton from "../components/Buttons/BorderedButton";
+import Navbar from "../components/Navbar";
 
 export default function Root() {
   return (
@@ -40,7 +41,9 @@ export default function Root() {
               <p className="text-sm font-bold">
                 It&apos;s easy, we will help you
               </p>
-              <SecondaryButton>Create playlist</SecondaryButton>
+              <SecondaryButton className="px-5">
+                Create playlist
+              </SecondaryButton>
             </Card>
 
             <Card className="gap-3 items-start bg-neutral-800 p-4">
@@ -50,7 +53,9 @@ export default function Root() {
               <p className="text-sm font-bold">
                 We&apos;ll keep you updated on new episodes
               </p>
-              <SecondaryButton>Browse podcasts</SecondaryButton>
+              <SecondaryButton className="px-5">
+                Browse podcasts
+              </SecondaryButton>
             </Card>
           </div>
 
@@ -88,24 +93,8 @@ export default function Root() {
       </aside>
 
       <SectionContainer className="overflow-scroll relative bg-local bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900">
-        <header className="fixed bg-neutral-90">
-          <nav>
-            <div>
-              <button title="Go back">
-                <FontAwesomeIcon icon={faAngleLeft} />
-              </button>
-              <button title="Go forward">
-                <FontAwesomeIcon icon={faAngleRight} />
-              </button>
-            </div>
-
-            <ul role="menu">
-              <li>
-                <a href="#">Sign up</a>
-                <a href={routes.LOGIN}>Log in</a>
-              </li>
-            </ul>
-          </nav>
+        <header className="absolute inset-0 bottom-auto px-7 py-3 bg-neutral-900">
+          <Navbar />
         </header>
 
         <main className="mt-16">
@@ -196,7 +185,9 @@ export default function Root() {
           credit card needed.
         </p>
 
-        <a href="#">Signup for free</a>
+        <SecondaryButton href="#" className="px-8 py-3">
+          Sign up free
+        </SecondaryButton>
       </aside>
     </div>
   );
