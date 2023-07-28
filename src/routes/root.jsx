@@ -10,6 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import SectionContainer from "../components/SectionContainer";
 import SideMenu from "../components/SideMenu";
+import RoundedButton from "../components/Buttons/RoundedButton";
+import CircularButton from "../components/Buttons/CircularButton";
+import Card from "../components/Card";
 
 export default function Root() {
   return (
@@ -18,29 +21,29 @@ export default function Root() {
         <SideMenu />
 
         <SectionContainer>
-          <div>
-            <button title="Collapse your library">
+          <div className="flex justify-between items-center">
+            <RoundedButton className="gap-3">
               <FontAwesomeIcon icon={faBookOpen} />
-              Your library
-            </button>
+              Your Library
+            </RoundedButton>
 
-            <button title="Create playlist or folder">
+            <CircularButton className="p-2">
               <FontAwesomeIcon icon={faPlus} />
-            </button>
+            </CircularButton>
           </div>
 
-          <div>
-            <div className="bg-neutral-700">
+          <div className="flex flex-col gap-6 h-32 overflow-auto">
+            <Card className="bg-neutral-800 p-4">
               <p>Create your first playlist</p>
               <p>It&apos;s easy, we will help you</p>
               <button>Create playlist</button>
-            </div>
+            </Card>
 
-            <div className="bg-neutral-700">
+            <Card className="bg-neutral-800 p-4">
               <p>Let&apos;s find some podcasts to follow</p>
               <p>We&apos;ll keep you updated on new episodes</p>
               <button>Create playlist</button>
-            </div>
+            </Card>
           </div>
 
           <div>
