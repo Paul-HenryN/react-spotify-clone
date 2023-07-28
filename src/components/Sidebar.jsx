@@ -10,7 +10,9 @@ import Card from "./Card";
 import { useEffect, useState, useRef } from "react";
 
 export default function Sidebar() {
-  const [width, setWidth] = useState(350);
+  const [width, setWidth] = useState(
+    parseInt(localStorage.getItem("sidebarWidth")) || 350
+  );
   let isDragged = useRef(false);
 
   useEffect(() => {
@@ -24,8 +26,9 @@ export default function Sidebar() {
     window.addEventListener("mouseup", () => {
       document.body.style.userSelect = "auto";
       isDragged.current = false;
+      localStorage.setItem("sidebarWidth", width);
     });
-  }, [isDragged, width]);
+  });
 
   return (
     <div className="flex relative overflow-y-auto">
