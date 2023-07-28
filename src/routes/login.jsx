@@ -77,7 +77,9 @@ export default function Login() {
             hintText="Password"
           />
 
-          <PrimaryButton type="submit" className="mt-5" label="Log In" />
+          <PrimaryButton type="submit" className="mt-5">
+            Log In
+          </PrimaryButton>
         </form>
 
         <div className="flex flex-col gap-5 items-center text-center">

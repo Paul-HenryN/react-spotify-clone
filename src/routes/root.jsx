@@ -13,15 +13,16 @@ import SideMenu from "../components/SideMenu";
 import RoundedButton from "../components/Buttons/RoundedButton";
 import CircularButton from "../components/Buttons/CircularButton";
 import Card from "../components/Card";
+import SecondaryButton from "../components/Buttons/SecondaryButton";
 
 export default function Root() {
   return (
     <div className="h-screen grid overflow-hidden grid-cols-[min_content_auto] gap-2 p-2 bg-black">
-      <aside className="flex flex-col gap-2 overflow-auto resize-x min-w-[15rem] max-w-[26rem]">
+      <aside className="flex flex-col gap-2 overflow-auto resize-x min-w-[18rem] max-w-[26rem]">
         <SideMenu />
 
         <SectionContainer>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center pb-3">
             <RoundedButton className="gap-3">
               <FontAwesomeIcon icon={faBookOpen} />
               Your Library
@@ -32,17 +33,23 @@ export default function Root() {
             </CircularButton>
           </div>
 
-          <div className="flex flex-col gap-6 h-32 overflow-auto">
-            <Card className="bg-neutral-800 p-4">
-              <p>Create your first playlist</p>
-              <p>It&apos;s easy, we will help you</p>
-              <button>Create playlist</button>
+          <div className="flex flex-col gap-6 h-36 pb-10 overflow-auto">
+            <Card className="gap-3 items-start bg-neutral-800 p-4">
+              <p className="font-bold">Create your first playlist</p>
+              <p className="text-sm font-bold">
+                It&apos;s easy, we will help you
+              </p>
+              <SecondaryButton>Create playlist</SecondaryButton>
             </Card>
 
-            <Card className="bg-neutral-800 p-4">
-              <p>Let&apos;s find some podcasts to follow</p>
-              <p>We&apos;ll keep you updated on new episodes</p>
-              <button>Create playlist</button>
+            <Card className="gap-3 items-start bg-neutral-800 p-4">
+              <p className="font-bold">
+                Let&apos;s find some podcasts to follow
+              </p>
+              <p className="text-sm font-bold">
+                We&apos;ll keep you updated on new episodes
+              </p>
+              <SecondaryButton>Browse podcasts</SecondaryButton>
             </Card>
           </div>
 

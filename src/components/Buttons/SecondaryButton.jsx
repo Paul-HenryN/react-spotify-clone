@@ -1,11 +1,11 @@
 import MainButton from "./MainButton";
 
-export default function PrimaryButton({ type, href, className, children }) {
+export default function SecondaryButton({ type, href, className, children }) {
   return (
     <MainButton
       type={type}
       href={href}
-      className={`py-3 bg-brand ${className}`}
+      className={`px-5 text-sm bg-white ${className}`}
     >
       {children}
     </MainButton>
