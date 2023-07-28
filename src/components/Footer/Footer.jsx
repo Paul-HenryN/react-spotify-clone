@@ -23,7 +23,7 @@ const socialIcons = [faInstagram, faTwitter, faFacebook];
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-10">
+    <footer className="flex flex-col gap-9">
       <div className="flex justify-between gap-10">
         <div className="flex flex-wrap gap-x-28 gap-y-10">
           <FooterList title="Company" links={companyLinks} />
@@ -36,7 +36,7 @@ export default function Footer() {
         <ul className="flex gap-3">
           {socialIcons.map((icon, i) => (
             <li key={`social${i}`}>
-              <CircularButton className="p-2 bg-neutral-700">
+              <CircularButton className="p-3 bg-neutral-700 hover:bg-neutral-500">
                 <FontAwesomeIcon size="lg" icon={icon}></FontAwesomeIcon>
               </CircularButton>
             </li>
@@ -44,9 +44,9 @@ export default function Footer() {
         </ul>
       </div>
 
-      <hr />
+      <hr className="border-t-neutral-600" />
 
-      <p>&copy; 2023 Spotify AB</p>
+      <p className="text-sm text-neutral-400">&copy; 2023 Spotify AB</p>
     </footer>
   );
 }

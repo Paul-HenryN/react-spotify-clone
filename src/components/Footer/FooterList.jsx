@@ -7,7 +7,12 @@ export default function FooterList({ title, links }) {
 
       {links.map((link) => (
         <li key={link}>
-          <FlatButton href="#">{link}</FlatButton>
+          <FlatButton
+            href="#"
+            className="text-neutral-400 hover:text-white hover:underline hover:underline-offset-1"
+          >
+            {link}
+          </FlatButton>
         </li>
       ))}
     </ul>
