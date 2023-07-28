@@ -14,15 +14,16 @@ import RoundedButton from "../components/Buttons/RoundedButton";
 import CircularButton from "../components/Buttons/CircularButton";
 import Card from "../components/Card";
 import SecondaryButton from "../components/Buttons/SecondaryButton";
+import BorderedButton from "../components/Buttons/BorderedButton";
 
 export default function Root() {
   return (
     <div className="h-screen grid overflow-hidden grid-cols-[min_content_auto] gap-2 p-2 bg-black">
-      <aside className="flex flex-col gap-2 overflow-auto resize-x min-w-[18rem] max-w-[26rem]">
+      <aside className="flex flex-col gap-2 overflow-auto resize-x min-w-[18rem] w-[20rem] max-w-[26rem]">
         <SideMenu />
 
-        <SectionContainer>
-          <div className="flex justify-between items-center pb-3">
+        <SectionContainer className="gap-5 h-full">
+          <div className="flex justify-between items-center">
             <RoundedButton className="gap-3">
               <FontAwesomeIcon icon={faBookOpen} />
               Your Library
@@ -53,8 +54,8 @@ export default function Root() {
             </Card>
           </div>
 
-          <div>
-            <ul>
+          <div className="flex flex-col gap-10 items-start mt-5">
+            <ul className="flex flex-wrap text-xs text-neutral-400 gap-3">
               <li>
                 <a href="#">Legal</a>
               </li>
@@ -78,10 +79,10 @@ export default function Root() {
               </li>
             </ul>
 
-            <button>
+            <BorderedButton className="hover:scale-105 gap-1 text-sm font-bold">
               <FontAwesomeIcon icon={faGlobe} />
               English
-            </button>
+            </BorderedButton>
           </div>
         </SectionContainer>
       </aside>
