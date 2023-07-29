@@ -15,7 +15,7 @@ export default function Root() {
           <Navbar />
         </header>
 
-        <main className="mt-16 min-h-[32rem]">
+        <main className="mt-16 min-h-[32rem] px-6">
           <Outlet />
         </main>
 

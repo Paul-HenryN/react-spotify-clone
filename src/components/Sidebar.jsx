@@ -6,7 +6,7 @@ import { faBookOpen, faPlus, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import CircularButton from "./Buttons/CircularButton";
 import SecondaryButton from "./Buttons/SecondaryButton";
 import BorderedButton from "./Buttons/BorderedButton";
-import Card from "./Card";
+import Card from "./Cards/Card";
 import { useEffect, useState, useRef } from "react";
 
 const defaultWidth = 350;
