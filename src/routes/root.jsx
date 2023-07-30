@@ -11,11 +11,11 @@ export default function Root() {
       <Sidebar />
 
       <SectionContainer className="overflow-scroll relative bg-local bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900">
-        <header className="sticky top-0 px-7 py-3 bg-neutral-950 bg-opacity-60">
+        <header className="sticky top-0 px-7 py-3 bg-neutral-900">
           <Navbar />
         </header>
 
-        <main className="min-h-[32rem] px-6">
+        <main className="px-6">
           <Outlet />
         </main>
 

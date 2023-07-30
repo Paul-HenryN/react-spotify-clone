@@ -23,7 +23,7 @@ const socialIcons = [faInstagram, faTwitter, faFacebook];
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-9 px-7 pb-20">
+    <footer className="flex flex-col gap-9 px-7 pb-20 mt-16">
       <div className="flex justify-between gap-10">
         <div className="flex flex-wrap gap-x-28 gap-y-10">
           <FooterList title="Company" links={companyLinks} />
