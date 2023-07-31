@@ -1,5 +1,6 @@
-import MediaGrid from "../components/MediaGrid";
+import MediaGrid from "../components/Layout/MediaGrid";
 import Section from "../components/Section";
+import SkeletonLoader from "../components/Skeleton/SkeletonLoader";
 import useFeaturedPlaylists from "../hooks/useFeaturedPlaylists";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       <h1 className="sr-only">Home</h1>
 
       {!featuredPlaylists ? (
-        "loading..."
+        <SkeletonLoader />
       ) : (
         <>
           <Section heading="Focus">

@@ -6,7 +6,7 @@ import { faBookOpen, faPlus, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import CircularButton from "./Buttons/CircularButton";
 import SecondaryButton from "./Buttons/SecondaryButton";
 import BorderedButton from "./Buttons/BorderedButton";
-import Card from "./Cards/Card";
+import VerticalCard from "./Cards/VerticalCard";
 import { useEffect, useState, useRef } from "react";
 
 const defaultWidth = 350;
@@ -69,7 +69,7 @@ export default function Sidebar() {
           </div>
 
           <div className="flex flex-col gap-6 h-36 pb-10 overflow-auto px-2">
-            <Card className="gap-3 items-start bg-neutral-800 p-4">
+            <VerticalCard className="gap-3 items-start bg-neutral-800 p-4">
               <p className="font-bold">Create your first playlist</p>
               <p className="text-sm font-bold">
                 It&apos;s easy, we will help you
@@ -77,9 +77,9 @@ export default function Sidebar() {
               <SecondaryButton className="px-5">
                 Create playlist
               </SecondaryButton>
-            </Card>
+            </VerticalCard>
 
-            <Card className="gap-3 items-start bg-neutral-800 p-4">
+            <VerticalCard className="gap-3 items-start bg-neutral-800 p-4">
               <p className="font-bold">
                 Let&apos;s find some podcasts to follow
               </p>
@@ -89,7 +89,7 @@ export default function Sidebar() {
               <SecondaryButton className="px-5">
                 Browse podcasts
               </SecondaryButton>
-            </Card>
+            </VerticalCard>
           </div>
 
           <div className="flex flex-col gap-10 items-start mt-5 px-6">

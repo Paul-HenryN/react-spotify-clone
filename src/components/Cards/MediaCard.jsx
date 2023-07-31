@@ -1,11 +1,11 @@
-import Card from "../Card";
-import CircularButton from "../../Buttons/CircularButton";
+import CircularButton from "../Buttons/CircularButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import VerticalCard from "./VerticalCard";
 
 export default function MediaCard({ name, description, imgUrl }) {
   return (
-    <Card className="relative bg-neutral-800 hover:bg-neutral-700 p-4 transition-all [&:hover>.mediacard-playbtn]:opacity-100 [&:hover>.mediacard-playbtn]:translate-y-[-10px]">
+    <VerticalCard className="relative bg-neutral-800 hover:bg-neutral-700 p-4 rounded-md transition-all [&:hover>.mediacard-playbtn]:opacity-100 [&:hover>.mediacard-playbtn]:translate-y-[-10px]">
       <img
         src={imgUrl}
         className="rounded-[0.25rem] shadow-lg shadow-neutral-950 mb-5"
@@ -21,6 +21,6 @@ export default function MediaCard({ name, description, imgUrl }) {
         </p>
         <p className="h-[3rem] overflow-hidden">{description}</p>
       </div>
-    </Card>
+    </VerticalCard>
   );
 }
