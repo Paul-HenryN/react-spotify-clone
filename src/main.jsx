@@ -3,23 +3,29 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Login from "./routes/login";
-import { routes } from "./shared/routes";
+import { paths } from "./shared/routes";
 import "./index.css";
 import Home from "./routes/home";
+import Playlist from "./routes/playlist";
 
 const router = createBrowserRouter([
   {
-    path: routes.LOGIN,
+    path: paths.LOGIN,
     element: <Login />,
   },
 
   {
-    path: routes.HOME,
+    path: paths.HOME,
     element: <Root />,
     children: [
       {
-        path: routes.HOME,
+        path: paths.HOME,
         element: <Home />,
+      },
+
+      {
+        path: paths.PLAYLIST,
+        element: <Playlist />,
       },
     ],
   },

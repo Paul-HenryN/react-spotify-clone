@@ -2,6 +2,7 @@ import CircularButton from "../Buttons/CircularButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import VerticalCard from "./VerticalCard";
+import PlayButton from "../Buttons/PlayButton";
 
 export default function MediaCard({ name, description, imgUrl }) {
   return (
@@ -11,9 +12,7 @@ export default function MediaCard({ name, description, imgUrl }) {
         className="rounded-[0.25rem] shadow-lg shadow-neutral-950 mb-5"
       />
 
-      <CircularButton className="opacity-0 mediacard-playbtn absolute right-[15%] top-[50%] hover:scale-105 bg-brand p-5 transition-all duration-300">
-        <FontAwesomeIcon icon={faPlay} color="black" size="lg" />
-      </CircularButton>
+      <PlayButton className="mediacard-playbtn opacity-0 absolute right-[15%] top-[40%] transition-[translate_opacity] duration-300" />
 
       <div>
         <p className="font-bold mb-2 whitespace-nowrap overflow-hidden text-ellipsis">

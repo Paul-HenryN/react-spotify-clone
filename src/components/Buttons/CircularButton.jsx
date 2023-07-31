@@ -5,7 +5,7 @@ export default function CircularButton({ type, href, className, children }) {
     <FlatButton
       type={type}
       href={href}
-      className={`rounded-[50%] aspect-square items-center justify-center ${className}`}
+      className={`flex rounded-[50%] aspect-square items-center justify-center ${className}`}
     >
       {children}
     </FlatButton>

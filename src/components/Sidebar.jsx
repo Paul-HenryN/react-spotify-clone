@@ -49,51 +49,51 @@ export default function Sidebar() {
   }, [width]);
 
   return (
-    <div className="flex relative overflow-y-auto">
+    <div className="flex relative overflow-y-hidden">
       <aside
         className="relative flex flex-col gap-2"
         style={{ width: `${width / 16}rem` }}
       >
         <SideMenu />
 
-        <SectionContainer className="gap-5 h-full">
-          <div className="flex justify-between items-center px-3">
-            <RoundedButton className="gap-3">
+        <SectionContainer className="h-full justify-stretch items-stretch">
+          <div className="relative flex justify-between items-center px-7 py-4 shadow-lg shadow-neutral-950">
+            <RoundedButton className="flex gap-3 items-center text-neutral-400 hover:text-white transition-colors duration-300">
               <FontAwesomeIcon icon={faBookOpen} />
               Your Library
             </RoundedButton>
 
-            <CircularButton className="p-2">
+            <CircularButton className="p-2 hover:bg-neutral-800 text-neutral-400 hover:text-white transition-colors">
               <FontAwesomeIcon icon={faPlus} />
             </CircularButton>
           </div>
 
-          <div className="flex flex-col gap-6 h-36 pb-10 overflow-auto px-2">
-            <VerticalCard className="gap-3 items-start bg-neutral-800 p-4">
+          <div className="flex flex-col gap-6 h-40 pb-10 overflow-auto px-2">
+            <VerticalCard className="gap-3 items-start bg-neutral-800 p-4 rounded-lg">
               <p className="font-bold">Create your first playlist</p>
               <p className="text-sm font-bold">
                 It&apos;s easy, we will help you
               </p>
-              <SecondaryButton className="px-5">
+              <SecondaryButton className="px-5 py-2">
                 Create playlist
               </SecondaryButton>
             </VerticalCard>
 
-            <VerticalCard className="gap-3 items-start bg-neutral-800 p-4">
+            <VerticalCard className="gap-3 items-start bg-neutral-800 p-4 rounded-lg">
               <p className="font-bold">
                 Let&apos;s find some podcasts to follow
               </p>
               <p className="text-sm font-bold">
                 We&apos;ll keep you updated on new episodes
               </p>
-              <SecondaryButton className="px-5">
+              <SecondaryButton className="px-5 py-2">
                 Browse podcasts
               </SecondaryButton>
             </VerticalCard>
           </div>
 
-          <div className="flex flex-col gap-10 items-start mt-5 px-6">
-            <ul className="flex flex-wrap text-xs text-neutral-400 gap-3">
+          <div className="flex flex-col gap-10 items-start px-6 justify-between py-5">
+            <ul className="flex flex-wrap text-[0.7rem] text-neutral-400 gap-3">
               <li>
                 <a href="#">Legal</a>
               </li>
@@ -117,8 +117,8 @@ export default function Sidebar() {
               </li>
             </ul>
 
-            <BorderedButton className="hover:scale-105 gap-1 text-sm font-bold">
-              <FontAwesomeIcon icon={faGlobe} />
+            <BorderedButton className="hover:scale-105 px-4 py-1 flex items-center gap-1 text-sm font-bold">
+              <FontAwesomeIcon icon={faGlobe} size="md" />
               English
             </BorderedButton>
           </div>
