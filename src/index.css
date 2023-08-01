@@ -5,3 +5,9 @@
 html {
   color-scheme: dark;
 }
+
+th,
+td {
+  font: inherit;
+  text-align: inherit;
+}

@@ -27,34 +27,41 @@ export default function Playlist() {
         "loading..."
       ) : (
         <div>
-          <header className="flex gap-5 items-end">
-            <img src={playlist.images[0].url} className="w-[25%]" />
-            <div>
-              <p>Playlist</p>
-              <h1 className="text-7xl font-extrabold">{playlist.name}</h1>
-              <p>
-                <Link className="font-bold hover:underline hover:underline-offset-1">
-                  {playlist.owner.display_name}
-                </Link>
-                &#8226;
-                {playlist.tracks.total} songs,
-                {playlistDurationHourMin[0] > 0 ? (
-                  <>
-                    about {playlistDurationHourMin[0]} hr
-                    {playlistDurationHourMin[1]} min
-                  </>
-                ) : (
-                  <>
-                    {playlistDurationMinSec[0]} min {playlistDurationMinSec[1]}{" "}
-                    sec
-                  </>
-                )}
-              </p>
+          <header className="flex gap-6 items-end p-5">
+            <img src={playlist.images[0].url} className="w-60" />
+
+            <div className="flex flex-col justify-between">
+              <p className="text-sm font-bold">Playlist</p>
+
+              <h1 className="text-[1.6rem] lg:text-[3.5rem] xl:text-[5.5rem] font-extrabold mb-5">
+                {playlist.name}
+              </h1>
+              <div className="flex flex-col gap-1">
+                <p className="opacity-75">{playlist.description}</p>
+                <p>
+                  <Link className="font-bold hover:underline hover:underline-offset-1">
+                    {playlist.owner.display_name}
+                  </Link>
+                  &#8226;
+                  {playlist.tracks.total} songs,
+                  {playlistDurationHourMin[0] > 0 ? (
+                    <>
+                      about {playlistDurationHourMin[0]} hr
+                      {playlistDurationHourMin[1]} min
+                    </>
+                  ) : (
+                    <>
+                      {playlistDurationMinSec[0]} min{" "}
+                      {playlistDurationMinSec[1]} sec
+                    </>
+                  )}
+                </p>
+              </div>
             </div>
           </header>
 
-          <section>
-            <div className="flex items-center gap-6">
+          <section className="px-6">
+            <div className="flex items-center gap-6 py-8">
               <PlayButton />
               <FlatButton>
                 <FontAwesomeIcon icon={faEllipsis} size="lg" />

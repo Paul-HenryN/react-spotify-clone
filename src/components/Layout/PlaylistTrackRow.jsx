@@ -1,17 +1,20 @@
 import { millisecondsToMinSec } from "../../utils/timeConvert";
+import PlaylistGrid from "./PlaylistGrid";
 
 export default function PlaylistTrackRow({ number, trackInfo }) {
   const [trackDurationMinutes, trackDurationSeconds] = millisecondsToMinSec(
     trackInfo.track.duration_ms
   );
   return (
-    <tr>
+    <PlaylistGrid className="px-5 py-1 rounded-md hover:bg-neutral-700 items-center">
       <td>{number}</td>
       <td>
         <img src="" />
         <div>
-          <p>{trackInfo.track.name}</p>
-          <p>
+          <p className="text-white overflow-hidden w-72 whitespace-nowrap text-ellipsis">
+            {trackInfo.track.name}
+          </p>
+          <p className="text-sm">
             {trackInfo.track.artists.map((artist, i) => (
               <>
                 {artist.name}
@@ -37,6 +40,6 @@ export default function PlaylistTrackRow({ number, trackInfo }) {
         {trackDurationMinutes}:{trackDurationSeconds < 10 ? "0" : ""}
         {trackDurationSeconds}
       </td>
-    </tr>
+    </PlaylistGrid>
   );
 }
