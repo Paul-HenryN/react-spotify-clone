@@ -6,17 +6,18 @@ import CircularButton from "./Buttons/CircularButton";
 import VerticalCard from "./Cards/VerticalCard";
 import SecondaryButton from "./Buttons/SecondaryButton";
 import BorderedButton from "./Buttons/BorderedButton";
+import FlatButton from "./Buttons/FlatButton";
 
 export default function SideLibrary() {
   return (
     <SectionContainer className="h-full justify-stretch items-stretch">
-      <div className="relative flex justify-between items-center px-7 py-4 shadow-lg shadow-neutral-950">
-        <RoundedButton className="flex gap-3 items-center text-neutral-400 hover:text-white transition-colors duration-300">
+      <div className="relative flex justify-between items-center px-5 py-4 shadow-lg shadow-neutral-950">
+        <RoundedButton className="flex gap-3 items-center px-2 py-1 text-neutral-400 hover:text-white transition-colors duration-300">
           <FontAwesomeIcon icon={faListDots} />
           Your Library
         </RoundedButton>
 
-        <CircularButton className="p-2 hover:bg-neutral-800 text-neutral-400 hover:text-white transition-colors">
+        <CircularButton className="w-8 hover:bg-neutral-800 text-neutral-400 hover:text-white transition-colors">
           <FontAwesomeIcon icon={faPlus} />
         </CircularButton>
       </div>
@@ -44,25 +45,25 @@ export default function SideLibrary() {
       <div className="flex flex-col gap-10 items-start px-6 justify-between py-5">
         <ul className="flex flex-wrap text-[0.7rem] text-neutral-400 gap-3">
           <li>
-            <a href="#">Legal</a>
+            <FlatButton href="#">Legal</FlatButton>
           </li>
           <li>
-            <a href="#">Privacy Center</a>
+            <FlatButton href="#">Privacy Center</FlatButton>
           </li>
           <li>
-            <a href="#">Privacy Policy</a>
+            <FlatButton href="#">Privacy Policy</FlatButton>
           </li>
           <li>
-            <a href="#">Cookies</a>
+            <FlatButton href="#">Cookies</FlatButton>
           </li>
           <li>
-            <a href="#">About Ads</a>
+            <FlatButton href="#">About Ads</FlatButton>
           </li>
           <li>
-            <a href="#">Accessibilty</a>
+            <FlatButton href="#">Accessibilty</FlatButton>
           </li>
           <li>
-            <a href="#">Cookies</a>
+            <FlatButton href="#">Cookies</FlatButton>
           </li>
         </ul>
 

@@ -5,7 +5,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 export default function NavButton({ back, disabled }) {
   return (
     <CircularButton
-      className={`p-2 bg-neutral-950 ${
+      className={`w-8 bg-neutral-950 ${
         disabled ? "cursor-not-allowed" : "cursor-pointer"
       }`}
     >

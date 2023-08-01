@@ -36,7 +36,10 @@ export default function Footer() {
         <ul className="flex gap-3">
           {socialIcons.map((icon, i) => (
             <li key={`social${i}`}>
-              <CircularButton className="p-3 bg-neutral-700 hover:bg-neutral-500">
+              <CircularButton
+                className="w-10 bg-neutral-700 hover:bg-neutral-500"
+                href="#"
+              >
                 <FontAwesomeIcon size="lg" icon={icon}></FontAwesomeIcon>
               </CircularButton>
             </li>

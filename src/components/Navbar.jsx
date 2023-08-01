@@ -7,8 +7,8 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between">
       <div className="flex gap-3 justify-center items-center">
-        <NavButton back disabled />
-        <NavButton />
+        <NavButton back />
+        <NavButton disabled />
       </div>
 
       <ul role="menu" className="flex items-center gap-10">
