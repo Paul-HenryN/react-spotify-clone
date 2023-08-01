@@ -3,7 +3,7 @@ import SectionSkeleton from "./SectionSkeleton";
 
 export default function SkeletonLoader() {
   return (
-    <div className="flex flex-col gap-12 mt-5">
+    <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-5">
         <div className="bg-neutral-700 w-[40%] h-12 rounded-3xl" />
 

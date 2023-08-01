@@ -40,7 +40,7 @@ export default function Footer() {
                 className="w-10 bg-neutral-700 hover:bg-neutral-500"
                 href="#"
               >
-                <FontAwesomeIcon size="lg" icon={icon}></FontAwesomeIcon>
+                <FontAwesomeIcon size="lg" icon={icon} />
               </CircularButton>
             </li>
           ))}
