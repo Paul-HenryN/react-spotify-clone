@@ -11,7 +11,7 @@ export default function Root() {
       <Sidebar />
 
       <SectionContainer className="overflow-scroll relative bg-local bg-gradient-to-b from-neutral-800 via-neutral-900 to-neutral-900">
-        <header className="sticky top-0 px-7 py-5 bg-[hsla(0,0%,7%,0.7)]">
+        <header className="sticky top-0 px-7 py-5 bg-[hsla(0,0%,7%,0.7)] z-50">
           <Navbar />
         </header>
 

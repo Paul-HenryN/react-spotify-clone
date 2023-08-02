@@ -4,7 +4,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default function PlayButton({ className }) {
   return (
-    <CircularButton className={`hover:scale-105 bg-brand p-5 ${className}`}>
+    <CircularButton className={`hover:scale-105 bg-brand w-14 ${className}`}>
       <FontAwesomeIcon icon={faPlay} color="black" size="lg" />
     </CircularButton>
   );

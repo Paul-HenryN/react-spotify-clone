@@ -22,13 +22,16 @@ export default function Playlist() {
   const playlistDurationHourMin = MinToHourMin(playlistDurationMinSec[0]);
 
   return (
-    <>
+    <div>
       {!playlist ? (
         "loading..."
       ) : (
-        <div>
+        <>
           <header className="flex gap-6 items-end p-5">
-            <img src={playlist.images[0].url} className="w-60" />
+            <img
+              src={playlist.images[0].url}
+              className="w-60 shadow-xl shadow-neutral-900"
+            />
 
             <div className="flex flex-col justify-between">
               <p className="text-sm font-bold">Playlist</p>
@@ -60,8 +63,8 @@ export default function Playlist() {
             </div>
           </header>
 
-          <section className="px-6">
-            <div className="flex items-center gap-6 py-8">
+          <section>
+            <div className="flex items-center gap-6 py-8 px-6">
               <PlayButton />
               <FlatButton>
                 <FontAwesomeIcon icon={faEllipsis} size="lg" />
@@ -70,15 +73,8 @@ export default function Playlist() {
 
             <PlaylistTable tracks={playlist.tracks.items} />
           </section>
-
-          <section>
-            <div>
-              <h2>Recommended</h2>
-              <p>Based on what&apos;s in this playlist</p>
-            </div>
-          </section>
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 }

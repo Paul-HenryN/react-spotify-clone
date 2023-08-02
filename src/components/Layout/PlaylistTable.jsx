@@ -5,8 +5,8 @@ import PlaylistGrid from "./PlaylistGrid";
 
 export default function PlaylistTable({ tracks }) {
   return (
-    <table className="w-full text-neutral-300">
-      <PlaylistGrid className="border-b-[1px] border-neutral-700 px-5 pb-2 mb-5">
+    <table className="relative w-full text-neutral-300">
+      <PlaylistGrid className="sticky bg-neutral-800 top-[70px] border-b-[1px] border-neutral-700 px-12 pb-2 mb-5">
         <th>#</th>
         <th>Title</th>
         <th>Album</th>
