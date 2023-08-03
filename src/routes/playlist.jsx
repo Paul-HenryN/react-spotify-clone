@@ -15,7 +15,7 @@ function sumDurations(tracks) {
 
 export default function Playlist() {
   const { playlistId } = useParams();
-  const playlist = usePlaylist(playlistId);
+  const [playlist] = usePlaylist(playlistId);
 
   const playlistDurationMs = playlist ? sumDurations(playlist.tracks.items) : 0;
   const playlistDurationMinSec = millisecondsToMinSec(playlistDurationMs);

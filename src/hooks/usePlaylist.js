@@ -3,15 +3,13 @@ import { useState } from "react";
 import fetchData from "../utils/fetchData";
 
 export default function usePlaylist(playlistId) {
-  const [playlist, setPlayList] = useState(null);
+  const [playlist, setPlaylist] = useState(null);
 
   useEffect(() => {
     fetchData(`https://api.spotify.com/v1/playlists/${playlistId}`).then(
-      (data) => {
-        setPlayList(data);
-      }
+      setPlaylist
     );
   }, [playlistId]);
 
-  return playlist;
+  return [playlist];
 }
