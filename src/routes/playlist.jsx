@@ -22,7 +22,7 @@ export default function Playlist() {
   const playlistDurationHourMin = MinToHourMin(playlistDurationMinSec[0]);
 
   return (
-    <div>
+    <div className="mt-12">
       {!playlist ? (
         "loading..."
       ) : (

@@ -23,12 +23,7 @@ export default function Sidebar() {
         const newWidth = previousWidth + e.movementX / 2;
         const isWidthInRange = newWidth >= minWidth && newWidth <= maxWidth;
 
-        if (!isWidthInRange) {
-          return previousWidth;
-        }
-
-        localStorage.setItem("sidebarWidth", newWidth);
-        return newWidth;
+        return isWidthInRange ? newWidth : previousWidth;
       });
     });
 
@@ -37,6 +32,10 @@ export default function Sidebar() {
       isDragged.current = false;
     });
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("sidebarWidth", width);
+  }, [width]);
 
   return (
     <div className="flex relative overflow-y-hidden">

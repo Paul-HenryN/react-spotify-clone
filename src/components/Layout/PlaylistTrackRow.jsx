@@ -17,7 +17,11 @@ export default function PlaylistTrackRow({ number, trackInfo }) {
         </FlatButton>
       </td>
       <td className="flex gap-3 overflow-hidden">
-        <img src={trackInfo.track.album.images[0].url} className="w-10" />
+        <img
+          src={trackInfo.track.album.images[0].url}
+          loading="lazy"
+          className="w-10"
+        />
         <div className="w-full">
           <p className="text-white max-w-[85%] overflow-hidden whitespace-nowrap text-ellipsis">
             {trackInfo.track.name}
