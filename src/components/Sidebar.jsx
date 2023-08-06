@@ -1,18 +1,8 @@
 import SideMenu from "./SideMenu";
-import SectionContainer from "./SectionContainer";
-import RoundedButton from "./Buttons/RoundedButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faPlus, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import CircularButton from "./Buttons/CircularButton";
-import SecondaryButton from "./Buttons/SecondaryButton";
-import BorderedButton from "./Buttons/BorderedButton";
-import VerticalCard from "./Cards/VerticalCard";
 import { useEffect, useState, useRef } from "react";
 import SideLibrary from "./SideLibrary";
 
-const defaultWidth = 350;
-const minWidth = 275;
-const maxWidth = 425;
+const [minWidth, maxWidth, defaultWidth] = [275, 425, 350];
 
 export default function Sidebar() {
   const [width, setWidth] = useState(
@@ -29,14 +19,17 @@ export default function Sidebar() {
 
       document.body.style.userSelect = "none";
 
-      const currentWidth =
-        parseInt(localStorage.getItem("sidebarWidth")) || defaultWidth;
+      setWidth((previousWidth) => {
+        const newWidth = previousWidth + e.movementX / 2;
+        const isWidthInRange = newWidth >= minWidth && newWidth <= maxWidth;
 
-      const newWidth = currentWidth + e.movementX;
+        if (!isWidthInRange) {
+          return previousWidth;
+        }
 
-      if (newWidth >= minWidth && newWidth <= maxWidth) {
-        setWidth(newWidth);
-      }
+        localStorage.setItem("sidebarWidth", newWidth);
+        return newWidth;
+      });
     });
 
     window.addEventListener("mouseup", () => {
@@ -44,10 +37,6 @@ export default function Sidebar() {
       isDragged.current = false;
     });
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("sidebarWidth", width);
-  }, [width]);
 
   return (
     <div className="flex relative overflow-y-hidden">

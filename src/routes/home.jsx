@@ -10,7 +10,7 @@ export default function Home() {
   console.log(featuredPlaylists);
 
   return (
-    <div className="px-7 mt-5">
+    <div className="px-7 mt-16">
       <h1 className="sr-only">Home</h1>
 
       {!featuredPlaylists ? (
