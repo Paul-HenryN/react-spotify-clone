@@ -3,6 +3,8 @@ import PlaylistGrid from "./PlaylistGrid";
 import FlatButton from "../Buttons/FlatButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { routes } from "../../shared/routes";
 
 export default function PlaylistTrackRow({ number, trackInfo }) {
   const [trackDurationMinutes, trackDurationSeconds] = millisecondsToMinSec(
@@ -23,9 +25,12 @@ export default function PlaylistTrackRow({ number, trackInfo }) {
           className="w-10"
         />
         <div className="w-full">
-          <p className="text-white max-w-[85%] overflow-hidden whitespace-nowrap text-ellipsis">
+          <Link
+            to={`${routes.TRACK}/${trackInfo.track.id}`}
+            className="text-white max-w-[85%] overflow-hidden whitespace-nowrap text-ellipsis hover:underline hover:underline-offset-1"
+          >
             {trackInfo.track.name}
-          </p>
+          </Link>
           <p className="text-sm">
             {trackInfo.track.artists.map((artist, i) => (
               <>
