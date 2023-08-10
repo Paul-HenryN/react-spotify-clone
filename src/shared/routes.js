@@ -5,6 +5,7 @@ export const routes = {
   LOGIN: `${base}/login`,
   SEARCH: `${base}/search`,
   PLAYLIST: `${base}/playlist`,
+  TRACK: `${base}/track`,
 };
 
 export const paths = {
@@ -12,4 +13,5 @@ export const paths = {
   LOGIN: routes.LOGIN,
   SEARCH: routes.SEARCH,
   PLAYLIST: `${routes.PLAYLIST}/:playlistId`,
+  TRACK: `${routes.TRACK}/:trackId`,
 };

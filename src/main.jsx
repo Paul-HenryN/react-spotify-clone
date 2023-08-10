@@ -7,6 +7,7 @@ import { paths } from "./shared/routes";
 import "./index.css";
 import Home from "./routes/home";
 import Playlist from "./routes/playlist";
+import Track from "./routes/track";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
       {
         path: paths.PLAYLIST,
         element: <Playlist />,
+      },
+
+      {
+        path: paths.TRACK,
+        element: <Track />,
       },
     ],
   },

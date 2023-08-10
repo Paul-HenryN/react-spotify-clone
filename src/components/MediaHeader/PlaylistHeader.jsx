@@ -1,30 +1,28 @@
 import MediaHeader from "./MediaHeader";
 import { Link } from "react-router-dom";
 
-export default function PlaylistHeader({
-  coverImage,
-  title,
-  description,
-  owner,
-  likesNumber,
-  tracksNumber,
-  duration,
-}) {
+function sumDurations(tracks) {
+  return tracks.reduce((total, current) => {
+    return total + current.track.duration_ms;
+  }, 0);
+}
+
+export default function PlaylistHeader({ playlist }) {
   return (
     <MediaHeader
       mediaType="Playlist"
-      coverImage={coverImage}
-      mediaTitle={title}
+      coverImage={playlist.images[0].url}
+      mediaTitle={playlist.name}
     >
-      <p className="opacity-75">{description}</p>
+      <p className="opacity-75">{playlist.description}</p>
 
       <p>
         <Link className="font-bold hover:underline hover:underline-offset-1">
-          {owner}
+          {playlist.owner.display_name}
         </Link>
         &#8226;
-        {tracksNumber} songs,
-        {duration}
+        {playlist.tracks.total} songs,
+        {sumDurations(playlist.tracks.items)}
       </p>
     </MediaHeader>
   );
