@@ -7,9 +7,10 @@ function sumDurations(tracks) {
   }, 0);
 }
 
-export default function PlaylistHeader({ playlist }) {
+export default function PlaylistHeader({ className, playlist }) {
   return (
     <MediaHeader
+      className={className}
       mediaType="Playlist"
       coverImage={playlist.images[0].url}
       mediaTitle={playlist.name}

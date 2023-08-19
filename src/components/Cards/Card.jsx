@@ -1,3 +1,8 @@
-export default function Card({ className, children }) {
-  return <div className={`flex ${className}`}>{children}</div>;
+export default function Card({ className, head, children }) {
+  return (
+    <div className={`flex ${className}`}>
+      {head}
+      {children}
+    </div>
+  );
 }

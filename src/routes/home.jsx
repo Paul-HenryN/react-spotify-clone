@@ -5,7 +5,7 @@ import useFeaturedPlaylists from "../hooks/useFeaturedPlaylists";
 import { routes } from "../shared/routes";
 
 export default function Home() {
-  const featuredPlaylists = useFeaturedPlaylists(10);
+  const featuredPlaylists = useFeaturedPlaylists(5);
 
   console.log(featuredPlaylists);
 
@@ -17,21 +17,10 @@ export default function Home() {
         <SkeletonLoader />
       ) : (
         <>
-          <Section heading="Focus">
-            <MediaGrid
-              mediaPageRoute={routes.PLAYLIST}
-              media={
-                featuredPlaylists ? featuredPlaylists.items.slice(0, 5) : null
-              }
-            />
-          </Section>
-
           <Section heading="Spotify Playlists">
             <MediaGrid
               mediaPageRoute={routes.PLAYLIST}
-              media={
-                featuredPlaylists ? featuredPlaylists.items.slice(5, 10) : null
-              }
+              media={featuredPlaylists ? featuredPlaylists.items : null}
             />
           </Section>
         </>

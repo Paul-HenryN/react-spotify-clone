@@ -4,7 +4,6 @@ import FlatButton from "../Buttons/FlatButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { routes } from "../../shared/routes";
 
 export default function PlaylistTrackRow({ number, trackInfo }) {
   const [trackDurationMinutes, trackDurationSeconds] = millisecondsToMinSec(
@@ -26,7 +25,7 @@ export default function PlaylistTrackRow({ number, trackInfo }) {
         />
         <div className="w-full">
           <Link
-            to={`${routes.TRACK}/${trackInfo.track.id}`}
+            to="#"
             className="text-white max-w-[85%] overflow-hidden whitespace-nowrap text-ellipsis hover:underline hover:underline-offset-1"
           >
             {trackInfo.track.name}

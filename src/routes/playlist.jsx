@@ -17,16 +17,9 @@ export default function Playlist() {
         "loading..."
       ) : (
         <>
-          <PlaylistHeader playlist={playlist} />
+          <PlaylistHeader playlist={playlist} className="px-7" />
 
           <section>
-            <div className="flex items-center gap-6 py-8 px-6">
-              <PlayButton />
-              <FlatButton>
-                <FontAwesomeIcon icon={faEllipsis} size="lg" />
-              </FlatButton>
-            </div>
-
             <PlaylistTable tracks={playlist.tracks.items} />
           </section>
         </>
