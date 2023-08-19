@@ -18,7 +18,7 @@ export default function MediaHeader({
         <div className="flex flex-col justify-between">
           <p className="text-sm font-bold">{mediaType}</p>
 
-          <h1 className="text-[1.6rem] lg:text-[3.5rem] xl:text-[5.5rem] font-extrabold mb-5">
+          <h1 className="text-[1.5rem] lg:text-[2.4rem] xl:text-[4.2rem] font-extrabold mb-5 whitespace-nowrap">
             {mediaTitle}
           </h1>
           <div className="flex flex-col gap-1">{children}</div>

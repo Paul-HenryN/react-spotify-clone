@@ -38,7 +38,7 @@ export default function Sidebar() {
   }, [width]);
 
   return (
-    <div className="flex relative overflow-y-hidden">
+    <div className="flex relative overflow-y-hidden select-none">
       <aside
         className="relative flex flex-col gap-2"
         style={{ width: `${width / 16}rem` }}

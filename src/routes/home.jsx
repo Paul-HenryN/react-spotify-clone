@@ -1,6 +1,6 @@
 import MediaGrid from "../components/Layout/MediaGrid";
 import Section from "../components/Section";
-import SkeletonLoader from "../components/Skeleton/SkeletonLoader";
+import SkeletonLoader from "../components/Loader/SkeletonLoader";
 import useFeaturedPlaylists from "../hooks/useFeaturedPlaylists";
 import { routes } from "../shared/routes";
 

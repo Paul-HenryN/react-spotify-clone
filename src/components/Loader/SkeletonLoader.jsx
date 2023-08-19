@@ -1,5 +1,5 @@
-import CardSkeleton from "./CardSkeleton";
-import SectionSkeleton from "./SectionSkeleton";
+import CardSkeleton from "../Skeleton/CardSkeleton";
+import SectionSkeleton from "../Skeleton/SectionSkeleton";
 
 export default function SkeletonLoader() {
   return (

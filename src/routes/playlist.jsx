@@ -1,20 +1,19 @@
 import { useParams } from "react-router-dom";
 import usePlaylist from "../hooks/usePlaylist";
-import PlayButton from "../components/Buttons/PlayButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import FlatButton from "../components/Buttons/FlatButton";
 import PlaylistTable from "../components/Layout/PlaylistTable";
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import PlaylistHeader from "../components/MediaHeader/PlaylistHeader";
+import DotLoader from "../components/Loader/DotLoader";
 
 export default function Playlist() {
   const { playlistId } = useParams();
   const [playlist] = usePlaylist(playlistId);
 
   return (
-    <div className="mt-12">
+    <div className="mt-20">
       {!playlist ? (
-        "loading..."
+        <div className="flex items-center justify-center h-[15rem]">
+          <DotLoader />
+        </div>
       ) : (
         <>
           <PlaylistHeader playlist={playlist} className="px-7" />
