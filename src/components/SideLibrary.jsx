@@ -68,7 +68,7 @@ export default function SideLibrary() {
         </ul>
 
         <BorderedButton className="hover:scale-105 px-4 py-1 flex items-center gap-1 text-sm font-bold">
-          <FontAwesomeIcon icon={faGlobe} size="md" />
+          <FontAwesomeIcon icon={faGlobe} size="sm" />
           English
         </BorderedButton>
       </div>
