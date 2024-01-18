@@ -33,7 +33,7 @@ export default function Login() {
     <div className="min-h-screen flex flex-col items-stretch font-body bg-black md:bg-gradient-to-b md:from-zinc-900 md:to-black">
       <header className="py-12 md:py-8 px-8 md:px-12 md:mb-8 bg-black">
         <nav>
-          <a href="/" className="outline-none">
+          <a href={routes.HOME} className="outline-none">
             <Logo className="w-20 md:w-28" />
           </a>
         </nav>
