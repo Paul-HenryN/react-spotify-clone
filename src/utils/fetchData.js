@@ -1,8 +1,9 @@
 import fetchAccessToken from "./fetchAccessToken";
-import { API_CLIENT_ID, API_CLIENT_SECRET } from "../../env";
 
 export default async function fetchData(url) {
-  const accessToken = await fetchAccessToken(API_CLIENT_ID, API_CLIENT_SECRET);
+  const clientId = import.meta.env.VITE_API_CLIENT_ID;
+  const clientSecret = import.meta.env.VITE_API_CLIENT_SECRET;
+  const accessToken = await fetchAccessToken(clientId, clientSecret);
 
   const res = await fetch(url, {
     method: "GET",
