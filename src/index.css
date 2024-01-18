@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  color-scheme: dark;
-}
-
-th,
-td {
-  font: inherit;
-  text-align: inherit;
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  
+  th,
+  td {
+    font: inherit;
+    text-align: inherit;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+   
+  /* Track */
+  ::-webkit-scrollbar-track {
+      @apply bg-zinc-500 rounded-lg;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-300 hover:bg-zinc-200 rounded-lg;
+  }
+  
 }
